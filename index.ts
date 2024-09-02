@@ -1,7 +1,7 @@
 /*
 1. Write a code to check whether the number is odd or even
 */
-let _number: number = 6;
+let _number: number = 15;
 if(_number % 2){
     console.log(_number + " is an odd number");
 }
@@ -62,5 +62,23 @@ if(_number >= 0){
 /*
 5. Write a code to print the first N fibonacci numbers
 */
+let _fibonacci1: number = 0;
+let _fibonacci2: number = 1;
+let _temp: number = 1;
 
+if(_number >= 0){
+    for (let i = 0; i <= _number; i++){
+        if(_number == 0){
+            console.log(_fibonacci1);
+        }
+        else{
+            _temp = _fibonacci1;
+            _fibonacci1 = _fibonacci2;
+            _fibonacci2 += _temp;
+            if(i == (_number - 1)){
+                console.log(_fibonacci1);
+            }
+        }
+    }
+}
 
