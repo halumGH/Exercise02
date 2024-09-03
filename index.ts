@@ -1,7 +1,7 @@
 /*
 1. Write a code to check whether the number is odd or even
 */
-let _number: number = 15;
+let _number: number = 6;
 if(_number % 2){
     console.log(_number + " is an odd number");
 }
@@ -33,30 +33,27 @@ else{
 /*
 3. Write a code to find the sum of the number 1 to N
 */
-if(_number >= 1){
-    let _SumNumber: number = 0;
-    for(let i = 1; i<= _number; i++){
-        _SumNumber += i;
-    }
-console.log(_SumNumber);
+let _SumNumber: number = 0;
+let _SumString: string = `${_number} -> `;
+for(let i = 1; i<= _number; i++){
+    _SumNumber += i;
+    _SumString += i === _number ? `${i} = ${_SumNumber}` : `${i} + `;
 }
+console.log(_SumNumber);
+console.log(_SumString);
 
 
 /*
 4. Write a code to find factorial of a number
 */
-if(_number >= 0){
-    let _factorial: number = 1;
-    if(_number == 0){
-        console.log(_factorial);
+let _factorial: number = 1;
+let _FacString: string = `${_number}! ->`
+for(let i = _number; i > 0; i--){
+    _factorial *= i;
+    _FacString += i == 1 ? ` ${i} = ${_factorial}` : ` ${i} x`;
     }
-    else{
-        for(let i = _number; i > 0; i--){
-            _factorial *= i;
-        }
-        console.log(_factorial);
-    }
-}
+console.log(_factorial);
+console.log(_FacString);
 
 
 /*
@@ -81,4 +78,3 @@ if(_number >= 0){
         }
     }
 }
-
